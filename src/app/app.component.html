@@ -169,82 +169,18 @@
           </div>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
-          <div
-            class="bg-white rounded-lg p-6 border border-slate-200 hover:shadow-md transition-shadow"
-          >
-            <div class="flex justify-between items-start mb-4">
-              <div>
-                <p class="text-sm text-slate-500">Total Revenue</p>
-                <h3 class="text-2xl font-bold">$84,254.75</h3>
-              </div>
-              <div class="p-2 bg-green-100 rounded-lg">
-                <span class="material-symbols-outlined text-green-600"
-                  >trending_up</span
-                >
-              </div>
-            </div>
-            <div class="flex items-center gap-1 text-sm">
-              <span class="text-green-600 font-medium">+18.2%</span>
-              <span class="text-slate-500">vs last month</span>
-            </div>
-          </div>
-          <div
-            class="bg-white rounded-lg p-6 border border-slate-200 hover:shadow-md transition-shadow"
-          >
-            <div class="flex justify-between items-start mb-4">
-              <div>
-                <p class="text-sm text-slate-500">Total Users</p>
-                <h3 class="text-2xl font-bold">12,546</h3>
-              </div>
-              <div class="p-2 bg-primary-100 rounded-lg">
-                <span class="material-symbols-outlined text-primary-600"
-                  >person</span
-                >
-              </div>
-            </div>
-            <div class="flex items-center gap-1 text-sm">
-              <span class="text-green-600 font-medium">+11.3%</span>
-              <span class="text-slate-500">vs last month</span>
-            </div>
-          </div>
-          <div
-            class="bg-white rounded-lg p-6 border border-slate-200 hover:shadow-md transition-shadow"
-          >
-            <div class="flex justify-between items-start mb-4">
-              <div>
-                <p class="text-sm text-slate-500">Session Duration</p>
-                <h3 class="text-2xl font-bold">4m 32s</h3>
-              </div>
-              <div class="p-2 bg-blue-100 rounded-lg">
-                <span class="material-symbols-outlined text-blue-600"
-                  >timer</span
-                >
-              </div>
-            </div>
-            <div class="flex items-center gap-1 text-sm">
-              <span class="text-red-600 font-medium">-2.7%</span>
-              <span class="text-slate-500">vs last month</span>
-            </div>
-          </div>
-          <div
-            class="bg-white rounded-lg p-6 border border-slate-200 hover:shadow-md transition-shadow"
-          >
-            <div class="flex justify-between items-start mb-4">
-              <div>
-                <p class="text-sm text-slate-500">Bounce Rate</p>
-                <h3 class="text-2xl font-bold">42.8%</h3>
-              </div>
-              <div class="p-2 bg-amber-100 rounded-lg">
-                <span class="material-symbols-outlined text-amber-600"
-                  >call_missed_outgoing</span
-                >
-              </div>
-            </div>
-            <div class="flex items-center gap-1 text-sm">
-              <span class="text-green-600 font-medium">+3.1%</span>
-              <span class="text-slate-500">vs last month</span>
-            </div>
-          </div>
+          <ng-container *ngFor="let card of statCards">
+            <app-stat-card
+              [title]="card.title"
+              [value]="card.value"
+              [icon]="card.icon"
+              [percentage]="card.percentage"
+              [timeframe]="card.timeframe"
+              [iconBackgroundColor]="card.iconBackgroundColor"
+              [iconTextColor]="card.iconTextColor"
+              [percentageColor]="card.percentageColor"
+            ></app-stat-card>
+          </ng-container>
         </div>
         <div class="mb-6">
           <div class="bg-white rounded-lg p-6 border border-slate-200">
