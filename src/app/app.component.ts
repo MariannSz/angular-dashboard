@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { RevenueChartComponent } from './components/revenue-chart/revenue-chart.component';
 import { TopProductsComponent } from './components/top-products/top-products.component';
 import { RecentActivityComponent } from './components/recent-activity/recent-activity.component';
+import { HeaderComponent } from './components/header/header.component';
 
 interface StatCard {
   title: string;
@@ -26,6 +27,7 @@ interface StatCard {
     RevenueChartComponent,
     TopProductsComponent,
     RecentActivityComponent,
+    HeaderComponent,
   ],
   templateUrl: './app.component.html',
   styleUrls: [],
@@ -77,11 +79,17 @@ export class AppComponent {
   revenueSeries: ApexAxisChartSeries = [
     {
       name: 'Revenue',
-      data: [45000, 47000, 52000, 58000, 63000, 70000],
+      data: [
+        28000, 30000, 29000, 35000, 32000, 37000, 39000, 40000, 44000, 46000,
+        48000, 52000,
+      ],
     },
     {
       name: 'Expenses',
-      data: [20000, 23000, 25000, 30000, 34000, 39000],
+      data: [
+        14000, 15000, 14500, 16000, 16500, 17000, 18000, 19000, 19500, 20000,
+        21000, 22000,
+      ],
     },
   ];
 
@@ -91,6 +99,19 @@ export class AppComponent {
   };
 
   revenueXAxis: ApexXAxis = {
-    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+    categories: [
+      'Jan',
+      'Feb',
+      'Mar',
+      'Apr',
+      'May',
+      'Jun',
+      'Jul',
+      'Aug',
+      'Sep',
+      'Oct',
+      'Nov',
+      'Dec',
+    ],
   };
 }
