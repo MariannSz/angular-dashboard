@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { NgApexchartsModule } from 'ng-apexcharts';
 import { ApexAxisChartSeries, ApexChart, ApexXAxis } from 'ng-apexcharts';
 import { StatCardComponent } from './components/stat-card/stat-card.component';
 import { CommonModule } from '@angular/common';
+import { RevenueChartComponent } from './components/revenue-chart/revenue-chart.component';
 
 interface StatCard {
   title: string;
@@ -18,7 +18,7 @@ interface StatCard {
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [NgApexchartsModule, StatCardComponent, CommonModule],
+  imports: [StatCardComponent, CommonModule, RevenueChartComponent],
   templateUrl: './app.component.html',
   styleUrls: [],
 })

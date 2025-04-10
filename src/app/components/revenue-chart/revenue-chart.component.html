@@ -1,0 +1,42 @@
+<div class="bg-white rounded-lg p-6 border border-slate-200">
+  <div class="flex justify-between items-center mb-6">
+    <h3 class="font-bold">Revenue Overview</h3>
+    <div class="flex items-center gap-3">
+      <div class="flex items-center gap-1">
+        <div class="w-3 h-3 rounded-full bg-primary-500"></div>
+        <span class="text-sm">Revenue</span>
+      </div>
+      <div class="flex items-center gap-1">
+        <div class="w-3 h-3 rounded-full bg-slate-300"></div>
+        <span class="text-sm">Expenses</span>
+      </div>
+      <details class="relative">
+        <summary
+          class="flex items-center gap-1 cursor-pointer list-none hover:text-slate-700 transition-colors"
+        >
+          <span class="material-symbols-outlined text-slate-400"
+            >more_horiz</span
+          >
+        </summary>
+        <div
+          class="absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-lg border border-slate-200 z-10 py-2"
+        >
+          <a
+            href="https://webcrumbs.cloud/placeholder"
+            class="block px-4 py-2 hover:bg-slate-100 transition-colors text-sm"
+            >Download CSV</a
+          >
+          <a
+            href="https://webcrumbs.cloud/placeholder"
+            class="block px-4 py-2 hover:bg-slate-100 transition-colors text-sm"
+            >View Full Report</a
+          >
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <div class="h-[300px]">
+    <apx-chart [series]="series" [chart]="chart" [xaxis]="xaxis"> </apx-chart>
+  </div>
+</div>
