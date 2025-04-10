@@ -4,6 +4,17 @@ import { ApexAxisChartSeries, ApexChart, ApexXAxis } from 'ng-apexcharts';
 import { StatCardComponent } from './components/stat-card/stat-card.component';
 import { CommonModule } from '@angular/common';
 
+interface StatCard {
+  title: string;
+  value: string;
+  icon: string;
+  percentage: string;
+  iconBackgroundColor: string;
+  iconTextColor: string;
+  percentageColor: string;
+  description: string;
+}
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -12,46 +23,46 @@ import { CommonModule } from '@angular/common';
   styleUrls: [],
 })
 export class AppComponent {
-  statCards = [
+  statCards: StatCard[] = [
     {
       title: 'Total Revenue',
       value: '$84,254.75',
       icon: 'trending_up',
       percentage: '+18.2%',
-      timeframe: 'vs last month',
       iconBackgroundColor: 'bg-green-100',
       iconTextColor: 'text-green-600',
       percentageColor: 'text-green-600',
+      description: 'vs last month',
     },
     {
       title: 'Total Users',
       value: '12,546',
       icon: 'person',
       percentage: '+11.3%',
-      timeframe: 'vs last month',
       iconBackgroundColor: 'bg-primary-100',
       iconTextColor: 'text-primary-600',
       percentageColor: 'text-green-600',
+      description: 'vs last month',
     },
     {
       title: 'Session Duration',
       value: '4m 32s',
       icon: 'timer',
       percentage: '-2.7%',
-      timeframe: 'vs last month',
       iconBackgroundColor: 'bg-blue-100',
       iconTextColor: 'text-blue-600',
       percentageColor: 'text-red-600',
+      description: 'vs last month',
     },
     {
       title: 'Bounce Rate',
       value: '42.8%',
       icon: 'call_missed_outgoing',
       percentage: '+3.1%',
-      timeframe: 'vs last month',
       iconBackgroundColor: 'bg-amber-100',
       iconTextColor: 'text-amber-600',
       percentageColor: 'text-green-600',
+      description: 'vs last month',
     },
   ];
 
