@@ -1,5 +1,7 @@
 <div id="webcrumbs">
-  <div class="w-[1280px] bg-slate-50 rounded-xl shadow-lg overflow-hidden">
+  <div
+    class="max-w-7xl mx-auto bg-slate-50 rounded-xl shadow-lg overflow-hidden"
+  >
     <header
       class="flex justify-between items-center p-6 bg-white border-b border-slate-200"
     >
@@ -83,65 +85,10 @@
       </div>
     </header>
     <div class="flex">
-      <aside class="w-64 bg-white border-r border-slate-200 p-4 h-screen">
-        <nav>
-          <ul class="space-y-1">
-            <li>
-              <a
-                href="https://webcrumbs.cloud/placeholder"
-                class="flex items-center gap-3 px-4 py-3 rounded-lg bg-primary-50 text-primary-600 font-medium"
-              >
-                <span class="material-symbols-outlined">dashboard</span>
-                Dashboard
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://webcrumbs.cloud/placeholder"
-                class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-slate-100 transition-colors"
-              >
-                <span class="material-symbols-outlined">analytics</span>
-                Analytics
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://webcrumbs.cloud/placeholder"
-                class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-slate-100 transition-colors"
-              >
-                <span class="material-symbols-outlined">group</span> Customers
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://webcrumbs.cloud/placeholder"
-                class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-slate-100 transition-colors"
-              >
-                <span class="material-symbols-outlined">shopping_cart</span>
-                Sales
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://webcrumbs.cloud/placeholder"
-                class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-slate-100 transition-colors"
-              >
-                <span class="material-symbols-outlined">paid</span> Revenue
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://webcrumbs.cloud/placeholder"
-                class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-slate-100 transition-colors"
-              >
-                <span class="material-symbols-outlined">settings</span> Settings
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </aside>
       <main class="flex-1 p-6">
-        <div class="flex justify-between items-center mb-6">
+        <div
+          class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-6"
+        >
           <h2 class="text-2xl font-bold">Analytics Dashboard</h2>
           <div class="flex items-center gap-4">
             <details class="relative">
@@ -221,7 +168,7 @@
             </button>
           </div>
         </div>
-        <div class="grid grid-cols-4 gap-6 mb-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
           <div
             class="bg-white rounded-lg p-6 border border-slate-200 hover:shadow-md transition-shadow"
           >
@@ -299,10 +246,8 @@
             </div>
           </div>
         </div>
-        <div class="grid grid-cols-3 gap-6 mb-6">
-          <div
-            class="col-span-2 bg-white rounded-lg p-6 border border-slate-200"
-          >
+        <div class="mb-6">
+          <div class="bg-white rounded-lg p-6 border border-slate-200">
             <div class="flex justify-between items-center mb-6">
               <h3 class="font-bold">Revenue Overview</h3>
               <div class="flex items-center gap-3">
@@ -339,39 +284,16 @@
                 </details>
               </div>
             </div>
-            <div class="h-[300px]"><div data-chart="chart_0"></div></div>
-          </div>
-          <div class="bg-white rounded-lg p-6 border border-slate-200">
-            <div class="flex justify-between items-center mb-6">
-              <h3 class="font-bold">Traffic Sources</h3>
-              <details class="relative">
-                <summary
-                  class="flex items-center gap-1 cursor-pointer list-none hover:text-slate-700 transition-colors"
-                >
-                  <span class="material-symbols-outlined text-slate-400"
-                    >more_horiz</span
-                  >
-                </summary>
-                <div
-                  class="absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-lg border border-slate-200 z-10 py-2"
-                >
-                  <a
-                    href="https://webcrumbs.cloud/placeholder"
-                    class="block px-4 py-2 hover:bg-slate-100 transition-colors text-sm"
-                    >Download CSV</a
-                  >
-                  <a
-                    href="https://webcrumbs.cloud/placeholder"
-                    class="block px-4 py-2 hover:bg-slate-100 transition-colors text-sm"
-                    >View Full Report</a
-                  >
-                </div>
-              </details>
+            <div class="h-[300px]">
+              <apx-chart
+                [series]="revenueSeries"
+                [chart]="revenueChart"
+                [xaxis]="revenueXAxis"
+              ></apx-chart>
             </div>
-            <div class="h-[300px]"><div data-chart="chart_1"></div></div>
           </div>
         </div>
-        <div class="grid grid-cols-2 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div class="bg-white rounded-lg p-6 border border-slate-200">
             <div class="flex justify-between items-center mb-6">
               <h3 class="font-bold">Top Products</h3>
