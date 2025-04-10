@@ -1,0 +1,119 @@
+<div class="bg-white rounded-lg p-6 border border-slate-200">
+  <div class="flex justify-between items-center mb-6">
+    <h3 class="font-bold">Recent Activity</h3>
+    <details class="relative">
+      <summary
+        class="flex items-center gap-1 px-3 py-1.5 border border-slate-200 rounded-md cursor-pointer list-none hover:bg-slate-50 transition-colors"
+      >
+        <span>Filter</span>
+        <span class="material-symbols-outlined text-slate-400 text-sm"
+          >expand_more</span
+        >
+      </summary>
+      <div
+        class="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-slate-200 z-10 py-2"
+      >
+        <a
+          href="https://webcrumbs.cloud/placeholder"
+          class="block px-4 py-2 hover:bg-slate-100 transition-colors text-sm"
+          >All Activities</a
+        >
+        <a
+          href="https://webcrumbs.cloud/placeholder"
+          class="block px-4 py-2 hover:bg-slate-100 transition-colors text-sm"
+          >User Actions</a
+        >
+        <a
+          href="https://webcrumbs.cloud/placeholder"
+          class="block px-4 py-2 hover:bg-slate-100 transition-colors text-sm"
+          >System Events</a
+        >
+        <a
+          href="https://webcrumbs.cloud/placeholder"
+          class="block px-4 py-2 hover:bg-slate-100 transition-colors text-sm"
+          >Errors</a
+        >
+      </div>
+    </details>
+  </div>
+  <div class="space-y-5">
+    <div class="flex gap-4">
+      <div class="relative">
+        <div
+          class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600"
+        >
+          <span class="material-symbols-outlined">person</span>
+        </div>
+        <div class="absolute top-10 left-5 w-0.5 h-full bg-slate-200"></div>
+      </div>
+      <div>
+        <div class="flex justify-between">
+          <h4 class="font-medium">New user registered</h4>
+          <span class="text-sm text-slate-500">2 hours ago</span>
+        </div>
+        <p class="text-sm text-slate-600 mt-1">
+          John Doe created a new account
+        </p>
+      </div>
+    </div>
+    <div class="flex gap-4">
+      <div class="relative">
+        <div
+          class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600"
+        >
+          <span class="material-symbols-outlined">payments</span>
+        </div>
+        <div class="absolute top-10 left-5 w-0.5 h-full bg-slate-200"></div>
+      </div>
+      <div>
+        <div class="flex justify-between">
+          <h4 class="font-medium">Payment received</h4>
+          <span class="text-sm text-slate-500">4 hours ago</span>
+        </div>
+        <p class="text-sm text-slate-600 mt-1">$2,856.00 from Client #38492</p>
+      </div>
+    </div>
+    <div class="flex gap-4">
+      <div class="relative">
+        <div
+          class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center text-amber-600"
+        >
+          <span class="material-symbols-outlined">sync</span>
+        </div>
+        <div class="absolute top-10 left-5 w-0.5 h-full bg-slate-200"></div>
+      </div>
+      <div>
+        <div class="flex justify-between">
+          <h4 class="font-medium">System update completed</h4>
+          <span class="text-sm text-slate-500">Yesterday</span>
+        </div>
+        <p class="text-sm text-slate-600 mt-1">
+          Analytics engine updated to v2.5.3
+        </p>
+      </div>
+    </div>
+    <div class="flex gap-4">
+      <div class="relative">
+        <div
+          class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center text-red-600"
+        >
+          <span class="material-symbols-outlined">error</span>
+        </div>
+      </div>
+      <div>
+        <div class="flex justify-between">
+          <h4 class="font-medium">Error detected</h4>
+          <span class="text-sm text-slate-500">2 days ago</span>
+        </div>
+        <p class="text-sm text-slate-600 mt-1">
+          API endpoint failed with 503 error
+        </p>
+      </div>
+    </div>
+  </div>
+  <button
+    class="w-full mt-6 py-2.5 text-sm text-primary-600 border border-primary-200 rounded-lg hover:bg-primary-50 transition-colors"
+  >
+    View All Activity
+  </button>
+</div>

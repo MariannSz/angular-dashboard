@@ -4,6 +4,7 @@ import { StatCardComponent } from './components/stat-card/stat-card.component';
 import { CommonModule } from '@angular/common';
 import { RevenueChartComponent } from './components/revenue-chart/revenue-chart.component';
 import { TopProductsComponent } from './components/top-products/top-products.component';
+import { RecentActivityComponent } from './components/recent-activity/recent-activity.component';
 
 interface StatCard {
   title: string;
@@ -24,6 +25,7 @@ interface StatCard {
     CommonModule,
     RevenueChartComponent,
     TopProductsComponent,
+    RecentActivityComponent,
   ],
   templateUrl: './app.component.html',
   styleUrls: [],
